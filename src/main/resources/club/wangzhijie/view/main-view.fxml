@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<!--Create by 朱文静-->
+
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="club.wangzhijie.view.MainController">
+    <HBox prefHeight="30.0" prefWidth="540.0">
+        <Label prefHeight="30.0" prefWidth="130.0" text="按姓名查找" />
+        <TextField fx:id="searchText" prefHeight="30.0" prefWidth="540.0" />
+    </HBox>
+    <TableView fx:id="addressGrid" onMouseClicked="#onAddressGridMouseClicked" prefHeight="560.0" prefWidth="540.0">
+        <columns>
+          <TableColumn fx:id="idTableColumn" minWidth="0.0" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="nameTableColumn" minWidth="0.0" prefWidth="100.0" text="姓名" />
+          <TableColumn fx:id="telephoneTableColumn" minWidth="0.0" prefWidth="150.0" text="电话号码" />
+          <TableColumn fx:id="mailTableColumn" minWidth="0.0" prefWidth="250.0" text="邮箱" />
+        </columns>
+    </TableView>
+    <HBox prefHeight="30.0" prefWidth="540.0">
+        <Label prefHeight="30.0" prefWidth="70.0" text="姓名" />
+        <TextField fx:id="nameTextfield" prefHeight="30.0" prefWidth="100.0" />
+        <Label prefHeight="30.0" prefWidth="70.0" text="电话号码" />
+        <TextField fx:id="telephoneTextfield" prefHeight="30.0" prefWidth="150.0" />
+    </HBox>
+    <HBox prefHeight="30.0" prefWidth="540.0">
+        <Label prefHeight="30.0" prefWidth="70.0" text="电子邮件" />
+        <TextField fx:id="mailTextfield" prefHeight="30.0" prefWidth="200.0" />
+    </HBox>
+    <HBox>
+        <Button mnemonicParsing="false" onAction="#onAppendAddressClick" prefHeight="70.0" prefWidth="180.0" text="添加" />
+        <Button mnemonicParsing="false" onAction="#onDeleteAddressClick" prefHeight="70.0" prefWidth="180.0" text="删除" />
+        <Button mnemonicParsing="false" onAction="#onModifyAddressClick" prefHeight="70.0" prefWidth="180.0" text="修改" />
+    </HBox>
+</VBox>
